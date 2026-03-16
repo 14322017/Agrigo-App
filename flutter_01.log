@@ -1,0 +1,82 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+PathAccessException: PathAccessException: Deletion failed, path = 'build\cache.dill.track.dill' (OS Error: The process cannot access the file because it is being used by another process.
+, errno = 32)
+
+```
+#0      _Directory._deleteSync (dart:io/directory_impl.dart:226:7)
+#1      FileSystemEntity.deleteSync (dart:io/file_system_entity.dart:425:7)
+#2      _File._deleteSync (dart:io/file_impl.dart:364:50)
+#3      FileSystemEntity.deleteSync (dart:io/file_system_entity.dart:425:7)
+#4      ForwardingFileSystemEntity.deleteSync (package:file/src/forwarding/forwarding_file_system_entity.dart:70:16)
+#5      ForwardingFileSystemEntity.deleteSync (package:file/src/forwarding/forwarding_file_system_entity.dart:70:16)
+#6      ErrorHandlingFileSystem.deleteIfExists (package:flutter_tools/src/base/error_handling_io.dart:90:14)
+#7      ErrorHandlingFile.copySync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:330:35)
+#8      _runSync (package:flutter_tools/src/base/error_handling_io.dart:550:14)
+#9      ErrorHandlingFile.copySync (package:flutter_tools/src/base/error_handling_io.dart:312:5)
+#10     ResidentRunner.cacheInitialDillCompilation (package:flutter_tools/src/resident_runner.dart:1294:18)
+#11     ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart:336:11)
+<asynchronous suspension>
+#12     asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:109:26)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.29.2, on Microsoft Windows [Version 10.0.19045.6332], locale en-US) [1,143ms]
+    [32m•[39m Flutter version 3.29.2 on channel stable at C:\src\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision c236373904 (7 months ago), 2025-03-13 16:17:06 -0400
+    [32m•[39m Engine revision 18b71d647a
+    [32m•[39m Dart version 3.7.2
+    [32m•[39m DevTools version 2.42.3
+
+[32m[✓][39m Windows Version (10 Pro 64-bit, 22H2, 2009) [4.1s]
+
+[33m[!][39m Android toolchain - develop for Android devices (Android SDK version 36.0.0) [10.4s]
+    [32m•[39m Android SDK at C:\Users\Anna Chris\AppData\Local\Android\sdk
+    [32m•[39m Platform android-36, build-tools 36.0.0
+    [32m•[39m Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+      This is the JDK bundled with the latest Android Studio installation on this machine.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    [32m•[39m Java version OpenJDK Runtime Environment (build 21.0.5+-13047016-b750.29)
+    [33m![39m Some Android licenses not accepted. To resolve this, run: flutter doctor --android-licenses
+
+[32m[✓][39m Chrome - develop for the web [380ms]
+    [32m•[39m Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[32m[✓][39m Visual Studio - develop Windows apps (Visual Studio Build Tools 2019 16.11.46) [379ms]
+    [32m•[39m Visual Studio at C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools
+    [32m•[39m Visual Studio Build Tools 2019 version 16.11.35931.194
+    [32m•[39m Windows 10 SDK version 10.0.19041.0
+
+[32m[✓][39m Android Studio (version 2024.3) [9ms]
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio
+    [32m•[39m Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build 21.0.5+-13047016-b750.29)
+
+[32m[✓][39m VS Code (version 1.104.2) [6ms]
+    [32m•[39m VS Code at C:\Users\Anna Chris\AppData\Local\Programs\Microsoft VS Code
+    [32m•[39m Flutter extension version 3.118.0
+
+[32m[✓][39m Connected device (3 available) [194ms]
+    [32m•[39m Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.19045.6332]
+    [32m•[39m Chrome (web)      • chrome  • web-javascript • Google Chrome 140.0.7339.207
+    [32m•[39m Edge (web)        • edge    • web-javascript • Microsoft Edge 140.0.3485.81
+
+[32m[✓][39m Network resources [854ms]
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 1 category.
+```
