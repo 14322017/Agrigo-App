@@ -1,0 +1,2 @@
+C:/Users/Anna Chris/Documents/AgriGo App/agrigo_app/android/app/.cxx/Debug/544f734l/arm64-v8a/CMakeFiles/edit_cache.dir
+C:/Users/Anna Chris/Documents/AgriGo App/agrigo_app/android/app/.cxx/Debug/544f734l/arm64-v8a/CMakeFiles/rebuild_cache.dir
